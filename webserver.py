@@ -3,14 +3,14 @@ from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 class webserverHandler(BaseHTTPRequestHandler):
 	def do_GET(self):
 		try:
-			if self.path.endwith("/hello"):
+			if self.path.endswith("/hello"):
 				self.send_response(200)
 				self.send_header('Content-Type', 'text/html')
 				self.end_headers()
 
 				output = ""
 				output += "<html><body>Hello!</body></html>"
-				self.wfile.wrtie(output)
+				self.wfile.write(output)
 				print output
 				return
 
@@ -30,5 +30,5 @@ def main():
 		server.socket.close()
 
 
-if __name__ = '__main__':
+if __name__ == '__main__':
 	main()
