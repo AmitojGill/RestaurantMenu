@@ -43,10 +43,15 @@ def editMenuItem(restaurant_id, menu_id):
 		return render_template('editmenuitem.html',restaurant_id=restaurant_id, menu_id = menu_id, item=editedItem)
 
 
-@app.route('/restaurants/<int:restaurant_id>/<int:menu_id>/delete/')
+@app.route('/restaurants/<int:restaurant_id>/<int:menu_id>/delete/', methods=['GET','POST'])
 def deleteMenuItem(restaurant_id, menu_id):
-	return "Page to delete a menu item. Task 3 compelete!"
-
+	itemToDelete = session.query(MenuItem).filter_by(id=menu_id).one()
+	if request.method =='POST':
+		session.delete(itemToDelete)
+		session.commit()
+		return redirect(url_for('restaurantMenu',restaurant_id=restaurant_id))
+	else:
+		return render_template('deletemenuitem.html', restaurant_id=restaurant_id,menu_id=menu_id, item=itemToDelete)
 
 if __name__ == '__main__':
     app.debug = True
