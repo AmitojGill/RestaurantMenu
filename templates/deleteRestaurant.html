@@ -2,10 +2,10 @@
 	<body>
 		<h1>Restaurant Menu App</h1>
 
-		<form action="#" method='POST'>
+		<form action="{{url_for('deleteRestaurant', restaurant_id = restaurant.id)}}" method='POST'>
 			<p>Are you sure you want to delete <b>{{restaurant.name}}</b> from the database?</p>
 			</br>	
 			<input type='submit' value='Yes'>
-			<a href="#"> Cancel</a>
+			<a href="{{url_for('showRestaurants')}}"> Cancel</a>
 	</body>
 </html>
