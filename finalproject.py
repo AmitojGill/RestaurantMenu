@@ -31,14 +31,27 @@ def showRestaurants():
 	
 
 #Add a new restaurant
-@app.route('/restaurant/new')
+@app.route('/restaurant/new', methods=['GET', 'POST'])
 def newRestaurant():
-	return render_template('newRestaurant.html')
+	if request.method == 'POST':
+		newRestaurant = Restaurant(name = request.form['name'])
+		session.add(newRestaurant)
+		session.commit()
+		return redirect(url_for('showRestaurants'))
+	else:
+		return render_template('newRestaurant.html')
 
 #Edit a restaurant
-@app.route('/restaurant/<int:restaurant_id>/edit')
+@app.route('/restaurant/<int:restaurant_id>/edit', methods=['GET', 'POST'])
 def editRestaurant(restaurant_id):
-	return render_template('editRestaurant.html', restaurant = restaurant)
+	restaurant = session.query(Restaurant).filter_by(id=restaurant_id).one()
+	if request.method ==  'POST':
+		updatedRestaurant = Restaurant(name = request.form['namme'], id=restaurant_id)
+		session.add(updatedRestaurant)
+		session.commit()
+		return redirect(url_for('showRestaurants'))
+	else:
+		return render_template('editRestaurant.html', restaurant = restaurant)
 
 #Delete a restaurant
 @app.route('/restaurant/<int:restaurant_id>/delete')
