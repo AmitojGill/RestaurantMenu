@@ -1,0 +1,22 @@
+<html>
+	<body>
+
+		<h1>Restaurant Menu APP</h1>
+
+		{% for restaurant in restaurants %}
+			<div>
+
+				<b>{{restaurant.name}}</b></br>
+				
+				<a href="#">Edit</a></br>
+
+				<a href="#">Delete</a></br>
+				</br>
+
+			</div>
+
+		{% endfor %}
+
+	</body>
+
+</html>
