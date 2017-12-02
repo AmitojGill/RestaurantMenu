@@ -1,23 +1,11 @@
 <html>
-	<head>
-		<link rel=stylesheet type=text/css href="{{url_for ('static', filename='styles.css')}}">
-	</head>
 	<body>
-		<h1>Are you sure you want to delete {{item.name}}?</h1>
-				{% with messages = get_flashed_messages() %}
-			{% if messages %}
+		<h1>Restaurant Menu App</h1>
+		<p>Are you sure you want to delete <b>{{item.name}}</b>?</p>
 
-				<ul>
-				{% for message in messages %}
-				  	<li><strong>{{message}}</strong></li>
-				{% endfor %}
-				</ul>
-				
-				{% endif %}
-			{% endwith %}
-		<form action="{{url_for('deleteMenuItem', restaurant_id=restaurant_id, menu_id=item.id)}}" method = 'POST'>
+		<form action="#" method = 'POST'>
 			<input type='submit' value='Delete'>
 		</form>
-		<a href="{{ url_for('restaurantMenu', restaurant_id=restaurant_id)}}">Cancel</a>
+		<a href="#">Cancel</a>
 	</body>
 </html>
