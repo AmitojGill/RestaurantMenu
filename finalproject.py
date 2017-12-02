@@ -68,19 +68,6 @@ def newMenuItem(restaurant_id):
 	else:
 		return render_template('newmenuitem.html',restaurant_id = restaurant_id,restaurant=restaurant)
 
-'''
-@app.route('/restaurants/<int:restaurant_id>/new/', methods=['GET','POST'])
-def newMenuItem(restaurant_id):
-	if request.method == 'POST':
-		newItem = MenuItem(name=request.form['name'], restaurant_id=restaurant_id)
-		session.add(newItem)
-		session.commit()
-		flash("new menu item created!")
-		return redirect(url_for('restaurantMenu', restaurant_id=restaurant_id))
-	else:
-		return render_template('newmenuitem.html', restaurant_id=restaurant_id)
-'''
-
 #Edit a menu item
 @app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/edit')
 def editMenuItem(restaurant_id, menu_id):
