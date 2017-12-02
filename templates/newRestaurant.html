@@ -2,10 +2,10 @@
 	<body>
 		<h1>Restaurant Menu App</h1>
 
-		<form action="#" method='POST'>
+		<form action="{{url_for('newRestaurant')}}" method='POST'>
 			<p>Name:</p>
 				<input type='text' size='30' name='name'>
 				<input type='submit' value='add'>
-			<a href="#"> Cancel</a>
+			<a href="{{url_for('showRestaurants')}}"> Cancel</a>
 	</body>
 </html>
