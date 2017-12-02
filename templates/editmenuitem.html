@@ -1,11 +1,20 @@
 <html>
 	<body>
 		<h1> Edit Menu Item</h1>
-		<form action="#" method = 'POST'>
+		<form action="{{url_for('editMenuItem', menu_id = item.id, restaurant_id = restaurant.id)}}" method = 'POST'>
 			<p>Name:</p>
 				<input type = 'text' size ='30' name='name' placeholder={{item.name}}>
+			<p>Description:</p>
+				<input type = 'text' size ='30' name='description' placeholder="{{item.description}}">
+			<p>Price:</p>
+				<input type = 'text' size ='30' name='price' placeholder="{{item.price}}">
+			<p>Course:</p>
+				<input type='radio' name='course' value='appetizer'>Appetizer</br>
+				<input type='radio' name='course' value='entree'>Entree</br>
+				<input type='radio' name='course' value='dessert'>Dessert</br>
+				<input type='radio' name='course' value='beverage'>Beverage</br>
 			<input type='submit' value='Edit'>
-			<a href="#">Cancel</a></br>
+			<a href="{{url_for('showMenu', restaurant_id = restaurant.id)}}">Cancel</a></br>
 
 		</form>
 
