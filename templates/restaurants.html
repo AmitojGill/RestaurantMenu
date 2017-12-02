@@ -7,11 +7,10 @@
 			<div>
 
 				<b>{{restaurant.name}}</b></br>
-				<b>{{restaurant.id}}</b></br>
 
-				<a href="{{url_for('showMenu',restaurant_id=restaurant.id)}}">Menu</a></br>
+				<a href="{{url_for('showMenu', restaurant_id=restaurant.id)}}">Menu</a></br>
 
-				<a href="#">Edit</a></br>
+				<a href="{{url_for('editRestaurant', restaurant_id=restaurant.id)}}">Edit</a></br>
 
 				<a href="#">Delete</a></br>
 				</br>
