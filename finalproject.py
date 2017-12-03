@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, request, jsonify
+from flask import Flask, render_template, redirect, url_for, request, jsonify, flash
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from database_setup import Base, Restaurant, MenuItem
@@ -37,7 +37,6 @@ def showRestaurants():
 	restaurants = session.query(Restaurant)
 	return render_template('restaurants.html', restaurants = restaurants)
 	
-
 #Add a new restaurant
 @app.route('/restaurant/new', methods=['GET', 'POST'])
 def newRestaurant():
@@ -45,6 +44,7 @@ def newRestaurant():
 		newRestaurant = Restaurant(name = request.form['name'])
 		session.add(newRestaurant)
 		session.commit()
+		flash("New Restaurant Created")
 		return redirect(url_for('showRestaurants'))
 	else:
 		return render_template('newRestaurant.html')
@@ -57,6 +57,7 @@ def editRestaurant(restaurant_id):
 		updatedRestaurant = Restaurant(name = request.form['namme'], id=restaurant_id)
 		session.add(updatedRestaurant)
 		session.commit()
+		flash('Restaurant Successfully Edited')
 		return redirect(url_for('showRestaurants'))
 	else:
 		return render_template('editRestaurant.html', restaurant = restaurant)
@@ -71,6 +72,7 @@ def deleteRestaurant(restaurant_id):
 		for item in deleteMenu:
 			session.delete(item)
 		session.commit()
+		flash('Restaurant Successfully Deleted')
 		return redirect(url_for('showRestaurants'))
 	else:
 		return render_template('deleteRestaurant.html', restaurant = deleteRestaurant)
@@ -94,6 +96,7 @@ def newMenuItem(restaurant_id):
 			restaurant_id=restaurant_id)
 		session.add(newItem)
 		session.commit()
+		flash('Menu Item Created')
 		return redirect(url_for('showMenu', restaurant_id=restaurant_id))
 	else:
 		return render_template('newmenuitem.html',restaurant_id = restaurant_id,restaurant=restaurant)
@@ -114,6 +117,7 @@ def editMenuItem(restaurant_id, menu_id):
 			itemToEdit.course = request.form['course']
 		session.add(itemToEdit)
 		session.commit()
+		flash('Menu Item Successfully Edited')
 		return redirect(url_for('showMenu', restaurant_id=restaurant_id))
 	else:
 		return render_template('editmenuitem.html',restaurant=restaurant, item=itemToEdit)
@@ -126,6 +130,7 @@ def deleteMenuItem(restaurant_id,menu_id):
 	if request.method == 'POST':
 		session.delete(itemToDelete)
 		session.commit()
+		flash('Memu item successfully deleted')
 		return redirect(url_for('showMenu', restaurant_id = restaurant_id))
 	else:
 		return render_template('deletemenuitem.html',restaurant = restaurant, item = itemToDelete)
