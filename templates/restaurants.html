@@ -1,10 +1,27 @@
+<!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Great places to eats in northern California!">
+		<meta name="keywords" content="Food, Restaurant, NorCal, Foodie, California, Eat, Local">
+		<title>NorCal Eats</title>
 		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
 	</head>
 	<body>
+		<header>
+			<div class="container" id="header-box">
+				<div id = 'logo'>
+					<img id="logo-image" src="static/img/nrc-logo.png" alt='NorCal Eats'>
+				</div>
+				<div id="site-title">
+					<h1 class="inline text" id="name">by Amitoj Gill </h1>
+				</br>
+					<h2 class="inline text" id="title">NorCal Eats</h2>
+				</div>
+			</div>
+		</header>
 
-		<h1>Restaurant Menu APP</h1>
+		<h1>NorCal Eats</h1>
 			{% with messages = get_flashed_messages() %}
 		{% if messages %}
 
@@ -19,23 +36,24 @@
 
 		<a href="{{url_for('newRestaurant')}}">Add a new Restaurant</a></br>
 		</br>
+		<main>
 
-		{% for restaurant in restaurants %}
-			<div>
+			{% for restaurant in restaurants %}
+				<div class="container" id="restaurant">
 
-				<b>{{restaurant.name}}</b></br>
+					<b>{{restaurant.name}}</b></br>
 
-				<a href="{{url_for('showMenu', restaurant_id=restaurant.id)}}">Menu</a></br>
+					<a href="{{url_for('showMenu', restaurant_id=restaurant.id)}}">Menu</a></br>
 
-				<a href="{{url_for('editRestaurant', restaurant_id=restaurant.id)}}">Edit</a></br>
+					<a href="{{url_for('editRestaurant', restaurant_id=restaurant.id)}}">Edit</a></br>
 
-				<a href="{{url_for('deleteRestaurant', restaurant_id=restaurant.id)}}">Delete</a></br>
-				</br>
+					<a href="{{url_for('deleteRestaurant', restaurant_id=restaurant.id)}}">Delete</a></br>
+					</br>
 
-			</div>
+				</div>
 
-		{% endfor %}
-
+			{% endfor %}
+		</main>
 	</body>
 
 </html>
