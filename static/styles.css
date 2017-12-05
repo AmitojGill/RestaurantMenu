@@ -2,6 +2,7 @@
 .container{
 	margin: 5px;
 	display: block;
+	background-color: black;
 }
 
 a{
@@ -16,7 +17,6 @@ a{
 
 /* Main */
 #restaurant {
-	height: 100px;
 	background-color: gray;
 }
 
