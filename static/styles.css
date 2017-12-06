@@ -17,20 +17,29 @@
 
 
 /* Main */
+/* Restaurant Card */
 #restaurant {
 	background-color: lightgray;
 	height: 150px;
 	width: 100%;
 	padding: 20px;
 	margin: 5px;
+	display: flex;
 }
 
 #restaurant-info {
 	width: 66%;
 	height: 100%;
 	background-color: pink;
+}
+
+#restaurant-image {
+	width: 33%;
+	height: 100%;
+	background-color: white;
 
 }
+
 /* Header */
 #header-box {
 	height: 75px;
