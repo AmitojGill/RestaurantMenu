@@ -40,14 +40,19 @@
 			{% for restaurant in restaurants %}
 				<div class="container" id="restaurant">
 
-					<b>{{restaurant.name}}</b></br>
+					<div class="container" id="restaurant-info">
 
-					<a href="{{url_for('showMenu', restaurant_id=restaurant.id)}}">Menu</a></br>
+						<b>{{restaurant.name}}</b></br>
 
-					<a href="{{url_for('editRestaurant', restaurant_id=restaurant.id)}}">Edit</a></br>
+						
 
-					<a href="{{url_for('deleteRestaurant', restaurant_id=restaurant.id)}}">Delete</a></br>
-					</br>
+						<a href="{{url_for('showMenu', restaurant_id=restaurant.id)}}">Menu</a></br>
+
+						<a href="{{url_for('editRestaurant', restaurant_id=restaurant.id)}}">Edit</a></br>
+
+						<a href="{{url_for('deleteRestaurant', restaurant_id=restaurant.id)}}">Delete</a></br>
+						</br>
+					</div>
 
 				</div>
 
