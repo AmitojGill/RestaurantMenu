@@ -44,15 +44,15 @@
 						<div class="container" id="restaurant-name">
 							<b>{{restaurant.name}}</b></br>
 						</div>
-						<div class="container" id="restaurant-action">
-							<div class="container" id="">
-								<a href="{{url_for('showMenu', restaurant_id=restaurant.id)}}">Menu</a></br>
+						<div class="container" id="restaurant-actions">
+							<div class="container restaurant-action">
+								<a class="inline" href="{{url_for('showMenu', restaurant_id=restaurant.id)}}">Menu</a></br>
 							</div>
-							<div class="container" id="">
-								<a href="{{url_for('editRestaurant', restaurant_id=restaurant.id)}}">Edit</a></br>
+							<div class="container restaurant-action">
+								<a class="inline" href="{{url_for('editRestaurant', restaurant_id=restaurant.id)}}">Edit</a></br>
 							</div>
-							<div class="container" id="">
-								<a href="{{url_for('deleteRestaurant', restaurant_id=restaurant.id)}}">Delete</a></br>
+							<div class="container restaurant-action">
+								<a  class="inline" href="{{url_for('deleteRestaurant', restaurant_id=restaurant.id)}}">Delete</a></br>
 							</div>
 						</div>
 						</br>
