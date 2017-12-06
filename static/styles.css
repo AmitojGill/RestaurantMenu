@@ -14,24 +14,36 @@
 	text-align: center
 }
 
+
+
 /* Main */
 #restaurant {
 	background-color: lightgray;
-	height: 100px;
+	height: 150px;
+	width: 100%;
+	padding: 20px;
+	margin: 5px;
 }
 
+#restaurant-info {
+	width: 66%;
+	height: 100%;
+	background-color: pink;
 
+}
 /* Header */
 #header-box {
 	height: 75px;
 	display: flex;
 	padding: 0 20px;
+	background-color: yellow;
 }
 
 #logo {
-	width: 100px;
-	height: 100px;
+	width: 75px;
+	height: 75px;
 	margin: auto;
+	background-color: white;
 }
 
 #logo-image {
@@ -43,16 +55,20 @@
 	padding-right: 20px;
 	margin: auto;
 	width: 100%;
+	height: 100%;
 	text-align: left;
+	background-color: green;
 }
 
 #name {
 	font-weight: bold;
 	text-align: right;
+	background-color: blue;
 
 }
 
 #title {
 	font-style: italic;
 	text-align: right;
+	background-color: skyblue;
 }
