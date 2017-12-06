@@ -41,19 +41,22 @@
 				<div class="container" id="restaurant">
 
 					<div class="container" id="restaurant-info">
+						<div class="container" id="restaurant-name">
+							<b>{{restaurant.name}}</b></br>
+						</div>
+						<div class="container" id="">
+							<a href="{{url_for('showMenu', restaurant_id=restaurant.id)}}">Menu</a></br>
+						</div>
+						<div class="container" id="">
+							<a href="{{url_for('editRestaurant', restaurant_id=restaurant.id)}}">Edit</a></br>
+						</div>
+						<div class="container" id="">
+							<a href="{{url_for('deleteRestaurant', restaurant_id=restaurant.id)}}">Delete</a></br>
+						</div>
 
-						<b>{{restaurant.name}}</b></br>
-
-						
-
-						<a href="{{url_for('showMenu', restaurant_id=restaurant.id)}}">Menu</a></br>
-
-						<a href="{{url_for('editRestaurant', restaurant_id=restaurant.id)}}">Edit</a></br>
-
-						<a href="{{url_for('deleteRestaurant', restaurant_id=restaurant.id)}}">Delete</a></br>
 						</br>
 					</div>
-					<div class="container" id="restaurant_image">
+					<div class="container" id="restaurant-image">
 
 					</div>
 
