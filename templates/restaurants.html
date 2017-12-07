@@ -10,13 +10,18 @@
 	<body>
 		<header>
 			<div class="container" id="header-box">
-				<div id = 'logo'>
+				<div class="container" id = 'logo'>
 					<img id="logo-image" src="static/img/nrc-logo.png" alt='NorCal Eats'>
 				</div>
-				<div id="site-title">
-					<h1 class="inline text" id="name">NorCal Eats</h1>
-				</br>
-					<h2 class="inline text" id="title">Restaurants</h2>
+				<div class="container" id="site-title">
+					<div class="container header-text">
+						<h1 class="inline text" id="name">NorCal Eats</h1>
+						</br>
+					</div>
+					<div class="container header-text">
+						<h2 class="inline text" id="title">Restaurants</h2>
+					</div>
+					
 				</div>
 			</div>
 		</header>
@@ -44,20 +49,22 @@
 						<div class="container" id="restaurant-name">
 							<b><h2>{{restaurant.name}}</h2></b>
 						</div>
+
 						<div class="container" id="restaurant-actions">
 							<div class="container restaurant-action">
-								<a class="inline" href="{{url_for('showMenu', restaurant_id=restaurant.id)}}">Menu</a></br>
+								<a class="inline" href="{{url_for('showMenu', restaurant_id=restaurant.id)}}">Menu</a>
 							</div>
 							<div class="container restaurant-action">
-								<a class="inline" href="{{url_for('editRestaurant', restaurant_id=restaurant.id)}}">Edit</a></br>
+								<a class="inline" href="{{url_for('editRestaurant', restaurant_id=restaurant.id)}}">Edit</a>
 							</div>
 							<div class="container restaurant-action">
-								<a  class="inline" href="{{url_for('deleteRestaurant', restaurant_id=restaurant.id)}}">Delete</a></br>
+								<a  class="inline" href="{{url_for('deleteRestaurant', restaurant_id=restaurant.id)}}">Delete</a>
 							</div>
 						</div>
 						</br>
 					</div>
 					<div class="container" id="restaurant-image">
+						<img src='static/img/restaurant_img.png' class="img" alt="Restaurant Image"/>
 
 					</div>
 
