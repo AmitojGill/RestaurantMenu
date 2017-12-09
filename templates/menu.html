@@ -49,17 +49,32 @@
 		<main class="container" id="main">
 			{% for i in items %}
 				<div class="container" id="card">
-					<b>{{i.name}}</b></br>
-
-					{{i.description}}</br>
-
-					{{i.price}}</br>
-					{{i.course}}</br>
-					
-					<a href="{{ url_for('editMenuItem', restaurant_id = restaurant.id, menu_id = i.id) }}">Edit</a></br>
-
-					<a href="{{ url_for('deleteMenuItem', restaurant_id = restaurant.id, menu_id = i.id) }}">Delete</a></br>
-					</br>
+					<div class="container" id="item-card">
+						<div class="sub-container" id="first-row">
+							<div class="sub-container" id="item-name">
+								<b>{{i.name}}</b>
+							</div>
+							<div class="sub-container" id="item-price">
+								{{i.price}}
+							</div>	
+						</div>
+						<dir class="sub-container" id="second-row">
+							<div class="sub-container" id="item-description">
+								{{i.description}}
+							</div>
+						</dir>
+						<div class="sub-container" id="third-row">
+							<div class="sub-container" id="item-course">
+								{{i.course}}
+							</div>
+							<div class="sub-container" id="item-edit">
+								<a href="{{ url_for('editMenuItem', restaurant_id = restaurant.id, menu_id = i.id) }}">Edit</a>
+							</div>
+							<div class="sub-container" id="item-delete">
+								<a href="{{ url_for('deleteMenuItem', restaurant_id = restaurant.id, menu_id = i.id) }}">Delete</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			{% endfor %}
 		</main>
