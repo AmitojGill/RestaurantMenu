@@ -46,29 +46,23 @@
 				{% endwith %}
 			</div>
 		</div>
+		<main class="container" id="main">
+			{% for i in items %}
+				<div class="container" id="card">
+					<b>{{i.name}}</b></br>
 
-		{% for i in items %}
+					{{i.description}}</br>
 
-			<div>
+					{{i.price}}</br>
+					{{i.course}}</br>
+					
+					<a href="{{ url_for('editMenuItem', restaurant_id = restaurant.id, menu_id = i.id) }}">Edit</a></br>
 
-				<b>{{i.name}}</b></br>
-
-				{{i.description}}</br>
-
-				{{i.price}}</br>
-				{{i.course}}</br>
-				
-				<a href="{{ url_for('editMenuItem', restaurant_id = restaurant.id, menu_id = i.id) }}">Edit</a></br>
-
-				<a href="{{ url_for('deleteMenuItem', restaurant_id = restaurant.id, menu_id = i.id) }}">Delete</a></br>
-				</br>
-
-
-
-			</div>
-
-		{% endfor %}
-
+					<a href="{{ url_for('deleteMenuItem', restaurant_id = restaurant.id, menu_id = i.id) }}">Delete</a></br>
+					</br>
+				</div>
+			{% endfor %}
+		</main>
 	</body>
 
 </html>
