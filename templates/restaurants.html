@@ -6,7 +6,7 @@
 		<meta name="keywords" content="Food, Restaurant, NorCal, Foodie, California, Eat, Local">
 		<title>NorCal Eats</title>
 		<link rel="stylesheet" type=text/css href="{{ url_for('static', filename='styles.css') }}">
-		<link rel="stylesheet" media='screen and (min-width:601px)' href="{{url_for('static', filename='medium.css')}}"
+		<link rel="stylesheet" media='screen and (min-width:601px)' href="{{url_for('static', filename='medium.css')}}">
 
 	</head>
 	<body>
@@ -32,7 +32,7 @@
 			<div class="container"  id="nav">
 				<a href="{{url_for('newRestaurant')}}">Add a new Restaurant</a>
 			</div>
-			
+
 			<div class="container" id="messages">
 					{% with messages = get_flashed_messages() %}
 				{% if messages %}
