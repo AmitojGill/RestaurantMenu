@@ -40,6 +40,7 @@
 	width: 100%;
 	display: flex;
 	background-color: skyblue;
+	display: table;
 }
 	#item-name {
 		width: 80%;
@@ -47,23 +48,32 @@
 		text-align: left;
 		background-color: yellow;
 		font-weight: bold;
+		display: table-cell;
+		vertical-align: middle;
+		padding-left: 10px;
 	}
 	#item-price {
 		width: 20%;
 		height: 100%;
 		vertical-align: middle;
 		background-color: pink;
+		display: table-cell;
 	}
 #second-row {
 	height: 35%;
 	width: 100%;
 	background-color: orange;
+	display: table;
 }
 	#item-description {
 		height: 100%;
 		width: 100%;
 		text-align: left;
 		background-color: skyblue;
+		display: table-cell;
+		vertical-align: middle;
+		padding-left: 10px;
+		font-style: italic;
 	}
 
 #third-row {
@@ -71,21 +81,30 @@
 	display: flex;
 	width: 100%;
 	background-color: gray;
+	display: table;
+
 }
 	#item-course {
 		width: 60%;
 		height: 100%;
 		text-align: left;
+		display: table-cell;
+		vertical-align: middle;
+		padding-left: 10px;
 	}
 	#item-edit {
 		width: 20%;
 		height: 100%;
 		text-align: center;
+		display: table-cell;
+		vertical-align: middle;
 	}
 	#item-delete {
 		width: 20%;
 		height: 100%;
 		text-align: center;
+		display: table-cell;
+		vertical-align: middle;
 	}
 
 
