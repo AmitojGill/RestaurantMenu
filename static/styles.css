@@ -16,8 +16,11 @@
 	height: 50%;
 }
 /* Main */
+.main {
+	display: block;
+}
 /* Restaurant Card */
-#restaurant {
+#card {
 	background-color: white;
 	height: 150px;
 	width: 80%;
