@@ -39,14 +39,12 @@
 	height: 40%;
 	width: 100%;
 	display: flex;
-	background-color: skyblue;
 	display: table;
 }
 	#item-name {
 		width: 80%;
 		height: 100%;
 		text-align: left;
-		background-color: yellow;
 		font-weight: bold;
 		display: table-cell;
 		vertical-align: middle;
@@ -56,20 +54,17 @@
 		width: 20%;
 		height: 100%;
 		vertical-align: middle;
-		background-color: pink;
 		display: table-cell;
 	}
 #second-row {
 	height: 35%;
 	width: 100%;
-	background-color: orange;
 	display: table;
 }
 	#item-description {
 		height: 100%;
 		width: 100%;
 		text-align: left;
-		background-color: skyblue;
 		display: table-cell;
 		vertical-align: middle;
 		padding-left: 10px;
@@ -80,7 +75,6 @@
 	height: 25%;
 	display: flex;
 	width: 100%;
-	background-color: gray;
 	display: table;
 
 }
