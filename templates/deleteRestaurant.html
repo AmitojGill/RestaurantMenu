@@ -25,6 +25,23 @@
 				</div>
 			</div>
 		</header>
+		<div class="container" id="top-bar">
+			<div class="container"  id="nav">
+			</div>
+			<div class="container" id="messages">
+					{% with messages = get_flashed_messages() %}
+				{% if messages %}
+
+					<ul>
+					{% for message in messages %}
+					  	<li><strong>{{message}}</strong></li>
+					{% endfor %}
+					</ul>
+					
+					{% endif %} 
+				{% endwith %}
+			</div>
+		</div>
 
 		<form action="{{url_for('deleteRestaurant', restaurant_id = restaurant.id)}}" method='POST'>
 			<p>Are you sure you want to delete <b>{{restaurant.name}}</b> from the database?</p>
