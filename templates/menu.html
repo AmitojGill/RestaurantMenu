@@ -25,25 +25,27 @@
 				</div>
 			</div>
 		</header>
+		<div class="container" id="top-bar">
+			<div class="container"  id="nav">
+				<a href="{{url_for('newRestaurant')}}">Add a new Restaurant</a>
+			</div>
+			<div class="container" id="new-item">
+				<a href = "{{url_for('newMenuItem', restaurant_id = restaurant.id) }}">Create New Item</a>
+			</div>
+			<div class="container" id="messages">
+					{% with messages = get_flashed_messages() %}
+				{% if messages %}
 
-		<h1>{{restaurant.name}}</h1>
-
-				{% with messages = get_flashed_messages() %}
-			{% if messages %}
-
-				<ul>
-				{% for message in messages %}
-				  	<li><strong>{{message}}</strong></li>
-				{% endfor %}
-				</ul>
-				
-				{% endif %}
-			{% endwith %}
-
-		<a href="{{url_for('showRestaurants')}}">All Restaurants</a></br>
-		<a href = "{{url_for('newMenuItem', restaurant_id = restaurant.id) }}">Create New Item</a>
-		</br>
-		</br>
+					<ul>
+					{% for message in messages %}
+					  	<li><strong>{{message}}</strong></li>
+					{% endfor %}
+					</ul>
+					
+					{% endif %}
+				{% endwith %}
+			</div>
+		</div>
 
 		{% for i in items %}
 
