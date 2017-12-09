@@ -70,13 +70,18 @@
 	display: flex;
 }
 	#nav {
-		width: 50%;
+		width: 30%;
 		text-align: center;
 
 	}
 
 	#messages {
-		width: 50%;
+		width: 40%;
+		text-align: center;
+	}
+
+	#new-item {
+		width: 30%;
 		text-align: center;
 	}
 
