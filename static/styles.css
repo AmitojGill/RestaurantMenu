@@ -4,6 +4,11 @@
 	margin: 5px;
 	text-align: center;
 }
+.sub-container {
+	display: block;
+	margin: 0 0 0 0px;
+	padding: 0 0 0 0px; 
+}
 
 .inline{
 	width: 100%;
@@ -21,6 +26,70 @@
 #main {
 	display: block;
 }
+
+/* card-item */
+#item-card {
+	display: block;
+	height: 100%;
+	width: 100%;
+	padding: 0 0 0 0PX;
+}
+
+#first-row {
+	height: 40%;
+	width: 100%;
+	display: flex;
+	background-color: skyblue;
+}
+	#item-name {
+		width: 80%;
+		height: 100%;
+		text-align: left;
+		background-color: yellow;
+		font-weight: bold;
+	}
+	#item-price {
+		width: 20%;
+		height: 100%;
+		vertical-align: middle;
+		background-color: pink;
+	}
+#second-row {
+	height: 35%;
+	width: 100%;
+	background-color: orange;
+}
+	#item-description {
+		height: 100%;
+		width: 100%;
+		text-align: left;
+		background-color: skyblue;
+	}
+
+#third-row {
+	height: 25%;
+	display: flex;
+	width: 100%;
+	background-color: gray;
+}
+	#item-course {
+		width: 60%;
+		height: 100%;
+		text-align: left;
+	}
+	#item-edit {
+		width: 20%;
+		height: 100%;
+		text-align: center;
+	}
+	#item-delete {
+		width: 20%;
+		height: 100%;
+		text-align: center;
+	}
+
+
+
 /* Restaurant Card */
 #card {
 	background-color: white;
