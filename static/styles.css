@@ -1,6 +1,7 @@
 /* General Structure and Style */
 .container{
 	display: block;
+	margin: 5px;
 	text-align: center;
 }
 
@@ -16,7 +17,7 @@
 	height: 50%;
 }
 /* Main */
-.main {
+#main {
 	display: block;
 }
 /* Restaurant Card */
