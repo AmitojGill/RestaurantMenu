@@ -3,7 +3,23 @@
 		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
 	</head>
 	<body>
-		<h1>Restaurant Menu App</h1>
+		<header>
+			<div class="container" id="header-box">
+				<div class="container" id = 'logo'>
+					<img id="logo-image" src="static/img/nrc-logo.png" alt='NorCal Eats'>
+				</div>
+				<div class="container" id="site-title">
+					<div class="container header-text">
+						<h1 class="inline text" id="name">NorCal Eats</h1>
+						</br>
+					</div>
+					<div class="container header-text">
+						<h2 class="inline text" id="title">Add a New Restaurants</h2>
+					</div>
+					
+				</div>
+			</div>
+		</header>
 
 		<form action="{{url_for('newRestaurant')}}" method='POST'>
 			<p>Name:</p>
