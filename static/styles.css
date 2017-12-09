@@ -36,7 +36,7 @@
 }
 
 #first-row {
-	height: 40%;
+	height: 20%;
 	width: 100%;
 	display: flex;
 	display: table;
@@ -57,7 +57,7 @@
 		display: table-cell;
 	}
 #second-row {
-	height: 35%;
+	height: auto;
 	width: 100%;
 	display: table;
 }
@@ -76,6 +76,9 @@
 	display: flex;
 	width: 100%;
 	display: table;
+	position: relative;
+	bottom: 0px;
+
 
 }
 	#item-course {
@@ -83,22 +86,22 @@
 		height: 100%;
 		text-align: left;
 		display: table-cell;
-		vertical-align: middle;
+		vertical-align: bottom;
 		padding-left: 10px;
 	}
 	#item-edit {
-		width: 20%;
+		width: 20%; 
 		height: 100%;
 		text-align: center;
 		display: table-cell;
-		vertical-align: middle;
+		vertical-align: bottom;
 	}
 	#item-delete {
 		width: 20%;
 		height: 100%;
 		text-align: center;
 		display: table-cell;
-		vertical-align: middle;
+		vertical-align: bottom;
 	}
 
 
