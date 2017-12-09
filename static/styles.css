@@ -63,6 +63,22 @@
 		width: 150px;
 		height: 150px;
 		}
+/* Top-bar*/
+#top-bar {
+	height: 30px;
+	background-color: #D3D3D3;
+	display: flex;
+}
+	#nav {
+		width: 50%;
+		text-align: center;
+
+	}
+
+	#messages {
+		width: 50%;
+		text-align: center;
+	}
 
 /* Header */
 #header-box {
