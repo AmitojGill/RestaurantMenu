@@ -115,6 +115,7 @@
 	margin: 30px 30px 30px 30px;
 	display: flex;
 	box-shadow: 5px 10px 8px 10px #DCDCDC;
+	border-radius: 15px;
 }
 
 	#restaurant-info {
