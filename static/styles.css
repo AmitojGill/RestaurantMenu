@@ -107,7 +107,7 @@
 
 
 /* Restaurant Card */
-#card {
+.card {
 	background-color: white;
 	height: 150px;
 	width: 80%;
@@ -149,6 +149,9 @@
 		width: 150px;
 		height: 150px;
 		}
+/* Restaurant Edit */
+#edit-restaurant {
+}
 /* Top-bar*/
 #top-bar {
 	height: 30px;
