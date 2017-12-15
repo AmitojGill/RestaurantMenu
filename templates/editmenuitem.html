@@ -8,6 +8,23 @@
 		<link rel="stylesheet" media='screen and (min-width:601px)' href="{{url_for('static', filename='medium.css')}}"> 
 	</head>
 	<body>
+		<header>
+			<div class="container" id="header-box">
+				<div class="container" id = 'logo'>
+					<img id="logo-image" src="http://localhost:5000/static/img/nrc-logo.png" alt='NorCal Eats'>
+				</div>
+				<div class="container" id="site-title">
+					<div class="container header-text">
+						<h1 class="inline text" id="name">NorCal Eats</h1>
+						</br>
+					</div>
+					<div class="container header-text">
+						<h2 class="inline text" id="title">Edit Menu Item</h2>
+					</div>
+					
+				</div>
+			</div>
+		</header>
 		<h1> Edit Menu Item</h1>
 		<form action="{{url_for('editMenuItem', menu_id = item.id, restaurant_id = restaurant.id)}}" method = 'POST'>
 			<p>Name:</p>
