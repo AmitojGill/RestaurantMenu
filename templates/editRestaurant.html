@@ -42,10 +42,19 @@
 				{% endwith %}
 			</div>
 		</div>
-		<form action="{{url_for('editRestaurant', restaurant_id = restaurant.id)}}" method='POST'>
-			<p>Edit Name:</p>
+		<form class="container card" id="edit-restaurant" action="{{url_for('editRestaurant', restaurant_id = restaurant.id)}}" method='POST'>
+			<div class="sub-container" id="first-row">
+				<p>Edit Name:</p>
+			</div>
+			<div class="sub-container" id="second-row">
 				<input type='text' size='30' name='name' placeholder='{{restaurant.name}}'>
+			</div>
+			<div class="sub-container" id="thirt-row">
 				<input type='submit' value='Update'>
-			<a href="{{url_for('showRestaurants')}}">Cancel</a>
+				<a href="{{url_for('showRestaurants')}}">Cancel</a>
+			</div>
+			
+				
+
 	</body>
 </html>
