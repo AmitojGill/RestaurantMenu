@@ -151,7 +151,26 @@
 		}
 /* Restaurant Edit */
 #edit-restaurant {
+	background-color: skyblue;
 }
+	#er-first-row {
+		display: flex;
+		height: 20%;
+		width: 100%;
+		background-color: pink;
+	}
+	#er-second-row {
+		display: flex;
+		width: 100%;
+		height: 20%;
+		background-color: yellow;
+	}
+	#er-third-row {
+		display: flex;
+		width: 100%;
+		background-color: red;
+		height: 30%;
+	}
 /* Top-bar*/
 #top-bar {
 	height: 30px;
