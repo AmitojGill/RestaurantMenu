@@ -43,13 +43,13 @@
 			</div>
 		</div>
 		<form class="container card" id="edit-restaurant" action="{{url_for('editRestaurant', restaurant_id = restaurant.id)}}" method='POST'>
-			<div class="sub-container" id="first-row">
+			<div class="container" id="er-first-row">
 				<p>Edit Name:</p>
 			</div>
-			<div class="sub-container" id="second-row">
+			<div class="container" id="er-second-row">
 				<input type='text' size='30' name='name' placeholder='{{restaurant.name}}'>
 			</div>
-			<div class="sub-container" id="thirt-row">
+			<div class="container" id="er-third-row">
 				<input type='submit' value='Update'>
 				<a href="{{url_for('showRestaurants')}}">Cancel</a>
 			</div>
